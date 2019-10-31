@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true,
+    'list-group-item-success': onLovIt > onDontLovIt,
+    'list-group-item-danger': onLovIt < onDontLovIt}">
+    <div style="width:20px;height:20px;background-color:red;"
+    *ngIf="loveIts > 0"></div>
+    <h2>{{ title }}</h2>
+    <p>{{ content  }}</p>
+    <p>{{  lastUpate | date: 'short'  }}</p>
+    <button class="btn btn-success" (click)="onLovIt()">loveIt</button>
+    <button class="btn btn-danger" (click)="onDontLovIt()">Don't loveIt</button>
+</li>
